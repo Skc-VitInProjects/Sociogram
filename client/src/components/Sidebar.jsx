@@ -49,7 +49,7 @@ const Sidebar = ({ selectedUser, setSelectedUser }) => {
                       key = {index} 
                       className={`relative flex items-center gap-2 px-3 py-2 rounded
                           cursor-pointer max-sm:text-sm 
-                          ${selectedUser?._id === user._id && 'bg-[#b3b3b3]'}`}>
+                          ${selectedUser?._id === user._id && 'bg-[#535353] '}`}>
 
                           <img src={user?.profilePic || assets.avatar_icon} alt="" 
                           className='w-[35px] aspect-[1/1] rounded-full'/>
@@ -62,7 +62,7 @@ const Sidebar = ({ selectedUser, setSelectedUser }) => {
                               }
                           </div>
                           {index > 2 && <p className='absolute top-4 right-4 text-xs h-5 w-5 
-                          flex justify-center items-center rounded-full bg-[#535353]'>
+                          flex justify-center items-center rounded-full bg-[#86af49]'>
                           {index}</p>}
                       </div>
 
