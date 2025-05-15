@@ -36,40 +36,40 @@ const assets = {
 
 export default assets;
 
-export const imagesDummyData = [pic1, pic2, pic3, pic4, pic1, pic2]
+export const imagesDummyData = [pic1, pic2, pic3, pic4, pic1, pic2];
 
 export const userDummyData = [
     {
         "_id": "680f50aaf10f3cd28382ecf2",
-        "email": "test1@skc_vit.com",
+        "email": "test1@skcvit.com",
         "fullName": "Alison Martin",
         "profilePic": profile_alison,
         "bio": "Hi Everyone, I am Using Sociogram",
     },
     {
         "_id": "680f50e4f10f3cd28382ecf9",
-        "email": "test2@skc_vit.com",
+        "email": "test2@skcvit.com",
         "fullName": "Martin Johnson",
         "profilePic": profile_martin,
         "bio": "Hi Everyone, I am Using Sociogram",
     },
     {
         "_id": "680f510af10f3cd28382ed01",
-        "email": "test3@skc_vit.com",
+        "email": "test3@skcvit.com",
         "fullName": "Enrique Martinez",
         "profilePic": profile_enrique,
         "bio": "Hi Everyone, I am Using Sociogram",
     },
     {
         "_id": "680f5137f10f3cd28382ed10",
-        "email": "test4@skc_vit.com",
+        "email": "test4@skcvit.com",
         "fullName": "Marco Jones",
         "profilePic": profile_marco,
         "bio": "Hi Everyone, I am Using Sociogram",
     },
     {
         "_id": "680f516cf10f3cd28382ed11", 
-        "email": "test5@skc_vit.com",
+        "email": "test5@skcvit.com",
         "fullName": "Richard Smith",
         "profilePic": profile_richard,
         "bio": "Hi Everyone, I am Using Sociogram",
