@@ -9,11 +9,11 @@ export const signup = async(req , res) => {
 
      try{
           if(!fullName || !email || !password || !bio){   //if any detail is missing
-               return res.json({success: false , message: "Message Details"});
+               return res.json({success: false , message: "Missing Details"});
           }
 
           const user = await User.findOne({email});        //checking if the email exists
-
+          
           if(user){    //if email id already registered
                return res.json({success: false ,message: "Account already exists"});
           }
@@ -39,8 +39,11 @@ export const signup = async(req , res) => {
 export const login = async(req , res) => {
      try{
           const { email , password } = req.body;
-          const userData = await User.findoOne({email}); 
-
+          const userData = await User.findOne({email}); 
+           
+          if (!userData) {
+              return res.json({ success: false, message: "Invalid credentials" });
+}
           const isPasswordCorrect = await bcrypt.compare(password, userData.password);
 
           if(!isPasswordCorrect){
