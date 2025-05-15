@@ -1,4 +1,4 @@
-import React , {useState}from 'react';
+import React , {useState , useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
 import assets from '../assets/assets';
 import { AuthContext } from '../../context/AuthContext';
@@ -9,8 +9,8 @@ const ProfilePage = () => {
   const [selectedImg , setSelectedImg] = useState(null);
   const navigate = useNavigate();
 
-  const [name , setName] = useState("Martin Johnson");       //dummy name given 
-  const [bio , setBio] = useState("Hi Everyone, I am Using Sociogram");
+  const [name , setName] = useState(authUser.fullName);        
+  const [bio , setBio] = useState(authUser.bio); 
  
   // function to handle the page after clicking on save button
   const handleSubmit = async (e)=> {
@@ -73,8 +73,9 @@ const ProfilePage = () => {
           </form> 
             
           {/* Logo on the right side */}
-          <img className="max-w-40 aspect-square rounded-full mx-10 max-sm:mt-10" 
-            src={assets.logo_icon} alt="" />
+          <img className={`max-w-40 aspect-square rounded-full mx-10 max-sm:mt-10 
+             ${selectedImg && 'rounded-full'}` }
+             src={authUser?.profilePic || assets.logo_icon} alt="" />
         </div>
     </div>
   );
