@@ -63,9 +63,12 @@ const Sidebar = () => {
                <div className='flex flex-col'> 
                    {filteredUsers.map((user , index) => (
                       <div
-                      onClick={()=> {setSelectedUser(user)}} 
-                      key = {index} 
-                      className={`relative flex items-center gap-2 px-3 py-2 rounded
+                         onClick={()=> {setSelectedUser(user);
+                         setUnseenMessages(prev => ({...prev , [user._id] : 0}));
+                        }} 
+
+                        key = {index} 
+                        className={`relative flex items-center gap-2 px-3 py-2 rounded
                           cursor-pointer max-sm:text-sm 
                           ${selectedUser?._id === user._id && 'bg-[#535353] '}`}>
 
