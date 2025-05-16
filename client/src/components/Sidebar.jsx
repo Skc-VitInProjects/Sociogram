@@ -42,8 +42,9 @@ const Sidebar = () => {
                               hidden group-hover:block '>
 
                                    {/* Menu Bar Options - Edit Profile And Logout */}
-                                   <p onClick={() => navigate('/profile')} className='cursor-pointer text-sm'>Edit Profile</p>
-                                   <hr className='my-2 border-t border-yellow-500' />
+                                   <p onClick={()=> navigate('/profile')} className='cursor-pointer text-sm'>Edit Profile</p>
+                                   
+                                   <hr className='my-2 border-t border-yel-500' />
                                    <p onClick ={()=> logout()} className='cursor-pointer text-sm'>Logout</p>
                               </div>
                          </div>
